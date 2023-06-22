@@ -1,0 +1,33 @@
+@use "../global/variables.scss";
+
+.menu-toggle {
+  width: 60px;
+  height: 60px;
+  padding: 24px 22px;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+  background-image: url("/img/menu-toggle.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 16px auto;
+
+  &--no-js {
+    display: none;
+  }
+
+  &--close {
+    background-image: url("/img/menu-toggle-close.svg");
+
+  }
+}
+
+@media (min-width: variables.$tablet-width) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+
+
+

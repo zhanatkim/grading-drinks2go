@@ -1,5 +1,28 @@
+@use "../global/variables.scss";
+
 .header {
-  background-color: #ffffff;
-  color: #333333;
-  padding: 10px 15px;
+  width: 100%;
+  position: relative;
 }
+
+.header__top {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  color: #333333;
+  padding: 0 60px 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  padding: 12px 0;
+
+}
+
+.header__toggle {
+  position: absolute;
+  right: 0;
+}
+

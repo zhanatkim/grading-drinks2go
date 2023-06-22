@@ -1,0 +1,22 @@
+
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.menu-list__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #f0ebff;
+
+  &:first-child {
+    border-top: 1px solid #f0ebff;
+  }
+
+}
+
+.menu-list__link {
+  padding: 20.5px;
+}

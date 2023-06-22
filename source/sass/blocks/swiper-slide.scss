@@ -1,0 +1,68 @@
+@use "../global/variables.scss";
+
+.swiper-slide {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 60px;
+
+  &--1 {
+    background-color: #f3ebe1;
+  }
+
+
+}
+
+
+.swiper-slide__wrapper {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.swiper-slide__title {
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+  color: #333333;
+  text-align: center;
+}
+
+.swiper-slide__description {
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.swiper-slide__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.swiper-slide__old-price {
+  font-size: 16px;
+  line-height: 32px;
+  color: #7859cf;
+  margin-right: 6px;
+}
+
+.swiper-slide__actual-price {
+  font-size: 20px;
+  line-height: 32px;
+  margin-right: 20px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+@media (min-width: variables.$tablet-width) {
+  .swiper-slide__title {
+    font-size: 56px;
+    line-height: 80px;
+  }
+}

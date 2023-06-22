@@ -1,0 +1,21 @@
+@use "../global/variables.scss";
+
+.main-nav {
+  display: none;
+  margin: 0 auto;
+  background-color: #ffffff;
+  width: 100%;
+
+  &--active {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+  }
+
+  &--no-js {
+    position: static;
+    display: flex;
+    flex-direction: column;
+  }
+}

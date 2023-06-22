@@ -1,0 +1,20 @@
+.features {
+  padding: 50px 20px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.features__title {
+  margin-bottom: 36px;
+}
+
+.features__wrapper {
+  margin: 0 auto;
+}
+.features__list {
+  display: grid;
+  gap: 32px;
+}
+.features__item {
+
+}

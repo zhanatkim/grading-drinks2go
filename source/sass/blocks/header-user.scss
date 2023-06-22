@@ -1,0 +1,21 @@
+@use "../global/variables.scss";
+
+.header-user {
+  display: flex;
+}
+
+.header-user__link {
+  padding: 22px;
+  box-sizing: border-box;
+  align-self: center;
+}
+
+.header-user__text {
+  display: none;
+}
+
+@media (min-width: variables.$desktop-width) {
+  .header-user__text {
+    display: block;
+  }
+}

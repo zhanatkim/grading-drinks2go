@@ -2,6 +2,20 @@
 @import "global/variables";
 @import "global/global";
 @import "global/fonts";
+@import "global/visually-hidden";
+@import "global/vendor";
 
 /* BLOCKS */
 @import "blocks/header";
+@import "blocks/header-user";
+@import "blocks/main-nav";
+@import "blocks/menu-list";
+@import "blocks/menu-toggle";
+@import "blocks/swiper";
+@import "blocks/swiper-slide.scss";
+@import "blocks/title";
+@import "blocks/main-container";
+@import "blocks/promo";
+@import "blocks/badge.scss";
+@import "blocks/button.scss";
+@import "blocks/features.scss";

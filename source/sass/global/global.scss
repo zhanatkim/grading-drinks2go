@@ -1,6 +1,6 @@
 @use "../global/variables.scss";
 
-.page {
+html {
   height: 100%;
   font-family: "Montserrat", "Arial", sans-serif;
   font-weight: 400;
@@ -9,7 +9,7 @@
   color: #333333;
 }
 
-.page__body {
+body {
   min-height: 100%;
   min-width: 320px;
   margin: 0 auto;
@@ -19,13 +19,30 @@
 }
 
 @media (min-width: variables.$tablet-width) {
-  .page__body {
-    min-width: variables.$tablet-width;
+  body {
+    width: variables.$tablet-width;
   }
 }
 
 @media (min-width: variables.$desktop-width) {
-  .page__body {
-    min-width: variables.$desktop-width;
+  body {
+    width: variables.$desktop-width;
   }
 }
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #333333;
+}
+
+button {
+  cursor: pointer;
+}
+
