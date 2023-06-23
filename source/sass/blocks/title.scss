@@ -8,6 +8,10 @@
   line-height: 1.5;
   color: #333333;
   text-align: center;
+
+  &--small {
+    font-size: 18px;
+  }
 }
 
 @media (min-width: variables.$tablet-width) {

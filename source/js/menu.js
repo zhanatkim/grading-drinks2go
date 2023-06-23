@@ -1,4 +1,3 @@
-
 /* Отображение меню*/
 
 const mainNav = document.querySelector('.main-nav');

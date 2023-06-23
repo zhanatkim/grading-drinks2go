@@ -1,0 +1,22 @@
+@use "../global/variables.scss";
+
+.form {
+  width: 100%;
+  display: grid;
+  gap: 30px;
+}
+
+
+.form__inner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (min-width: variables.$tablet-width) {
+  .form__inner {
+    flex-direction: row;
+  }
+
+}
