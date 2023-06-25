@@ -1,8 +1,27 @@
-
+@use "../global/variables.scss";
 
 .sorting {
   display: flex;
+  justify-content: space-between;
   gap: 8px;
   width: 100%;
+}
 
+.sorting__select-control {
+  background-color: transparent;
+  border: none;
+  // padding: 4px 10px;
+  margin: 0;
+  font-size: 16px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 600;
+  line-height: 24px;
+  color: variables.$base-primary;
+}
+
+@media (min-width: variables.$tablet-width) {
+  .sorting {
+    justify-content: flex-end;
+    gap: 10px;
+  }
 }

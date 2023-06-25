@@ -1,39 +1,31 @@
+@use "../global/variables.scss";
+@use "../global/mixins.scss";
+
+
 .button {
+  @include mixins.button-hover-down;
+
   border: none;
-  background-color: #7859cf;
+  background-color: $base-primary;
   padding: 8px 20px;
   border-radius: 4px;
-  color: #ffffff;
+  color: $base-white;
   font-size: 16px;
   line-height: 24px;
   font-family: "Montserrat", "Arial", sans-serif;
   font-weight: 400;
 
-  &:hover,
-  &:focus {
-    background-color: #9070ec;
+  &--with-icon {
+    padding-left: 46px;
+    background-image: url("../../img/button-cart.svg");
+    background-position: left 20px top 10px;
+    background-repeat: no-repeat;
   }
 
-  &:active {
-    background-color: #593cac;
-  }
-
-  &:disabled {
-    background-color: #bdbdbd;
-  }
 
   &--light {
-    background-color: #ffffff;
-    color: #7859cf;
-
-    &:hover,
-    &:focus {
-      color: #ffffff;
-    }
-
-    &:disabled {
-      color: #ffffff;
-      background-color: #e2e2e2;
-    }
+    @include mixins.light-button-hover-down;
+    background-color: $base-white;
+    color: $base-primary;
   }
 }

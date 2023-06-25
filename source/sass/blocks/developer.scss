@@ -1,0 +1,15 @@
+@use "../global/mixins.scss";
+@use "../global/variables.scss";
+
+.developer {
+
+}
+
+.developer__link {
+  @include mixins.footer-link-hover-down;
+  color: $base-gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}

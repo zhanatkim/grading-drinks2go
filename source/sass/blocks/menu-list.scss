@@ -1,3 +1,5 @@
+@use "../global/mixins.scss";
+@use "../global/variables.scss";
 
 .menu-list {
   display: flex;
@@ -9,14 +11,57 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid #f0ebff;
+  border-bottom: 1px solid variables.$base-secondary;
 
   &:first-child {
-    border-top: 1px solid #f0ebff;
+    border-top: 1px solid variables.$base-secondary;
   }
 
 }
 
 .menu-list__link {
+  @include mixins.header-link-hover-down;
   padding: 20.5px;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+}
+
+
+
+@media (min-width: variables.$tablet-width) {
+  .menu-list__item {
+    border: none;
+  }
+
+
+
+  .menu-list {
+    flex-direction: row;
+  }
+  .menu-list__link {
+    padding: 30px 20px;
+  }
+
+  .menu-list__link--current {
+    color: variables.$base-primary;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: variables.$base-primary;
+    }
+  }
+}
+
+@media (min-width: variables.$desktop-width) {
+  .menu-list {
+    gap: 20px;
+  }
+
 }

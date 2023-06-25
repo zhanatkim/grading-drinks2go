@@ -1,11 +1,11 @@
 @use "../global/variables.scss";
 
-.form {
+.form,
+.form__wrapper {
   width: 100%;
   display: grid;
   gap: 30px;
 }
-
 
 .form__inner {
   width: 100%;
@@ -15,8 +15,32 @@
 }
 
 @media (min-width: variables.$tablet-width) {
+  .form {
+    gap: 40px;
+  }
+
+  .form__wrapper {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
   .form__inner {
     flex-direction: row;
+    justify-content: center;
+  }
+}
+
+@media (min-width: variables.$desktop-width) {
+  .form {
+    width: 318px;
+    position: absolute;
+    top: 70px;
+    left: 0;
+  }
+
+  .form__wrapper {
+    grid-template-columns: 1fr;
+  }
+  .form__inner {
+    justify-content: space-between;
   }
 
 }

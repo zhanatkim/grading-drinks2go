@@ -1,3 +1,4 @@
+@use "../global/variables.scss";
 
 .range {
   padding-top: 20px;
@@ -6,15 +7,15 @@
 .range__scale {
   margin: 10px 0;
   position: relative;
-  height: 2px;
-  background-color: #e2e2e2;
+  height: 4px;
+  background-color: $light-gray;
   width: 100%;
 }
 
 .range__bar {
   position: absolute;
-  background-color: #9070ec;
-  height: 2px;
+  background-color: $primary-lighter;
+  height: 4px;
   width: 86%;
   left: 10px;
 }
@@ -24,10 +25,10 @@
   width: 24px;
   height: 24px;
   box-sizing: border-box;
-  border: 2px solid #9070ec;
+  border: 2px solid $primary-lighter;
   border-radius: 50%;
-  background-color: #ffffff;
-  top: -12px;
+  background-color: $base-white;
+  top: -10px;
   z-index: 1;
 
   &--min {
@@ -37,16 +38,25 @@
   &--max {
     right: -12px;
   }
-}
 
+  &:hover::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    background-color: $primary-opacity;
+    border-radius: 50%;
+  }
 
-.range__toggle:hover {
-  opacity: 50%;
-}
+  &:active {
+    border-color: $base-primary;
+  }
 
-.range__toggle:focus-visible {
-  outline: 2px solid #af4fff;
-  outline-offset: 2px;
+  &:active::after {
+    background-color: $base-primary;
+  }
 }
 
 .range__inner {
@@ -59,13 +69,22 @@
 .range__input {
   width: 118px;
   box-sizing: border-box;
-  border: 2px solid #9070ec;
+  border: 2px solid $primary-lighter;
   border-radius: 4px;
   padding: 8px 10px;
+
+  &:hover,
+  &:focus {
+    outline-color: $primary-darker;
+  }
+
+  &:disabled {
+    border-color: $light-gray;
+  }
 }
 
 .range__span {
   width: 8px;
   height: 2px;
-  background-color: #bdbdbd;
+  background-color: $base-gray;
 }

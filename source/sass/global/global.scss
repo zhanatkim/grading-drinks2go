@@ -1,33 +1,28 @@
 @use "../global/variables.scss";
 
 html {
+  position: relative;
   height: 100%;
   font-family: "Montserrat", "Arial", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
   color: #333333;
+
+  &:root {
+    --swiper-theme-color: #7859cf;
+    --swiper-navigation-size: 20px;
+  }
 }
 
 body {
+  position: relative;
   min-height: 100%;
   min-width: 320px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   border: 2px solid tomato;
-}
-
-@media (min-width: variables.$tablet-width) {
-  body {
-    width: variables.$tablet-width;
-  }
-}
-
-@media (min-width: variables.$desktop-width) {
-  body {
-    width: variables.$desktop-width;
-  }
 }
 
 ul {
@@ -46,3 +41,26 @@ button {
   cursor: pointer;
 }
 
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type='number'],
+input[type="number"]:hover,
+input[type="number"]:focus {
+    appearance: none;
+    -moz-appearance: textfield;
+}
+
+@media (min-width: variables.$tablet-width) {
+  body {
+    width: variables.$tablet-width;
+  }
+}
+
+@media (min-width: variables.$desktop-width) {
+  body {
+    width: variables.$desktop-width;
+  }
+}

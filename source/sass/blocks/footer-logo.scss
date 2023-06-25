@@ -1,0 +1,17 @@
+@use "../global/variables.scss";
+
+.footer-logo__text {
+  display: none;
+}
+
+@media (min-width: variables.$desktop-width) {
+  .footer-logo {
+    display: grid;
+    gap: 10px;
+
+  }
+
+  .footer-logo__text {
+    display: inline;
+  }
+}

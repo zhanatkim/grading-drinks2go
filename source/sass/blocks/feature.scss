@@ -1,0 +1,49 @@
+@use "../global/variables.scss";
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feature__text {
+  padding: 0;
+  text-align: center;
+}
+
+@media (min-width: variables.$tablet-width) {
+  .feature {
+    position: relative;
+    padding-left: 72px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature__svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .feature__text {
+    padding: 0;
+    text-align: center;
+  }
+
+}
+
+@media (min-width: variables.$desktop-width) {
+  .feature {
+    position: relative;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature__svg {
+    position: static;
+
+  }
+}

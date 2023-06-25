@@ -1,0 +1,22 @@
+@use "../global/variables.scss";
+
+.product-cards__list {
+  display: grid;
+  gap: 20px;
+}
+
+
+
+@media (min-width: variables.$tablet-width) {
+  .product-cards__list {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+}
+
+@media (min-width: variables.$desktop-width) {
+  .product-cards__list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

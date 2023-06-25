@@ -6,7 +6,7 @@
   font-weight: 700;
   font-size: 24px;
   line-height: 1.5;
-  color: #333333;
+  color: variables.$base-black;
   text-align: center;
 
   &--small {
@@ -17,6 +17,10 @@
 @media (min-width: variables.$tablet-width) {
   .title {
     font-size: 42px;
+
+    &--small {
+      font-size: 24px;
+    }
 
   }
 }

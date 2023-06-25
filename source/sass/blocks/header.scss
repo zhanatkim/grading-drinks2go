@@ -3,13 +3,20 @@
 .header {
   width: 100%;
   position: relative;
+  min-height: 60px;
+}
+.header__text {
+  display: none;
+  width: 126px;
+  font-size: 12px;
+  line-height: 16px;
 }
 
 .header__top {
   position: relative;
   width: 100%;
   box-sizing: border-box;
-  color: #333333;
+  color: variables.$base-black;
   padding: 0 60px 0 20px;
   display: flex;
   justify-content: space-between;
@@ -17,6 +24,12 @@
 }
 
 .header__logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__link {
   padding: 12px 0;
 
 }
@@ -26,3 +39,28 @@
   right: 0;
 }
 
+@media (min-width: variables.$tablet-width) {
+  .header {
+    min-height: 80px;
+  }
+
+  .header__top {
+    padding-right: 20px;
+    min-height: 80px;
+  }
+}
+
+@media (min-width: variables.$desktop-width) {
+
+  .header__top {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .header__logo {
+    gap: 20px;
+  }
+  .header__text {
+    display: inline-flex;
+  }
+}

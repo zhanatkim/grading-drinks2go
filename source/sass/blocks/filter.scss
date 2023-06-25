@@ -1,9 +1,11 @@
+@use "../global/variables.scss";
 
 .filter {
   border: none;
   margin: 0;
   padding: 0;
-  display: flex;
+  display: grid;
+  align-items: start;
   width: 100%;
 
   &:nth-of-type(2) {
@@ -19,6 +21,7 @@
   padding-top: 20px;
   display: grid;
   gap: 20px;
+  align-items: start;
 }
 
 .filter__label {
@@ -38,21 +41,21 @@
   box-sizing: border-box;
   border-radius: 50%;
   background-color: transparent;
-  border: 2px solid #bdbdbd;
+  border: 2px solid variables.$base-gray;
 }
 
 .filter__input[type="radio"]:checked + .filter__mark {
-  border-color: #9070ec;
+  border-color: variables.$primary-lighter;
 }
 
 .filter__input[type="radio"]:checked + .filter__mark::after {
   content: "";
   position: absolute;
-  top: 2.5px;
-  left: 2.4px;
+  top: 2px;
+  left: 2px;
   width: 16px;
   height: 16px;
-  background-color: #9070ec;
+  background-color: variables.$primary-lighter;
   border-radius: 50%;
 }
 
@@ -66,7 +69,7 @@
   border-bottom-right-radius: 30% 50%;
   border-top-left-radius: 30% 50%;
   border-top-right-radius: 30% 50%;
-  background-color: #bdbdbd;
+  background-color: variables.$base-gray;
 
   &::before {
     content: "";
@@ -75,13 +78,13 @@
     left: 3px;
     width: 18px;
     height: 18px;
-    background-color: #ffffff;
+    background-color: variables.$base-white;
     border-radius: 50%;
   }
 }
 
 .filter__input[type="checkbox"]:checked + .filter__mark {
-  background-color: #7859cf;
+  background-color: $primary-lighter;
 
 }
 
@@ -89,8 +92,6 @@
   transform: translateX(18px);
   transition: transform 500ms;
 }
-
-
 
 .filter__name {
   padding: 0;

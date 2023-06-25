@@ -20,6 +20,10 @@
     background-image: url("/img/menu-toggle-close.svg");
 
   }
+
+  &:active {
+    background-color: $base-secondary;
+  }
 }
 
 @media (min-width: variables.$tablet-width) {

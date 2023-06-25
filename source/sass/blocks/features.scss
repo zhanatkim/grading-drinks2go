@@ -1,14 +1,15 @@
+@use "../global/variables.scss";
+
 .features {
   padding: 50px 20px 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.features__badge {
-  margin-bottom: 4px;
-}
+
 .features__title {
-  margin-bottom: 36px;
+  padding-top: 4px;
+  padding-bottom: 36px;
 }
 
 .features__wrapper {
@@ -18,13 +19,37 @@
   display: grid;
   gap: 32px;
 }
-.features__item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
+@media (min-width: variables.$tablet-width) {
+
+  .features {
+    padding: 60px 30px 100px;
+  }
+
+  .features__title {
+    padding-bottom: 60px;
+  }
+
+  .features__list {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 50px;
+  }
 }
 
-.features__text {
-  padding: 0;
-  text-align: center;
+@media (min-width: variables.$desktop-width) {
+
+  .features {
+    padding: 100px 40px 120px;
+  }
+
+  .features__title {
+    padding-bottom: 80px;
+  }
+
+  .features__list {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 50px;
+  }
 }

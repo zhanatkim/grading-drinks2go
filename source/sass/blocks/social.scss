@@ -1,0 +1,33 @@
+@use "../global/variables.scss";
+
+.social__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.social__link {
+  display: inline-flex;
+  padding: 10px;
+  border-radius: 4px;
+  color: variables.$base-gray;
+
+  &:hover,
+  &:focus {
+    background-color: variables.$base-secondary;
+    color: variables.$base-primary;
+  }
+
+  &:active {
+    background-color: variables.$primary-opacity;
+  }
+}
+
+@media (min-width: variables.$desktop-width) {
+
+  .social__list {
+    justify-content: flex-start;
+
+  }
+}

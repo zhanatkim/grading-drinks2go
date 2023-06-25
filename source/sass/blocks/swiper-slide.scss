@@ -1,17 +1,22 @@
 @use "../global/variables.scss";
 
 .swiper-slide {
-  margin: 0;
   padding: 0;
   padding-bottom: 60px;
 
   &--1 {
-    background-color: #f3ebe1;
+    background-color: variables.$flat-white;
   }
 
+  &--2 {
+    background-color: variables.$lavender-latte;
+  }
+
+  &--3 {
+    background-color: variables.$espresso;
+  }
 
 }
-
 
 .swiper-slide__wrapper {
   margin: 0 auto;
@@ -28,7 +33,7 @@
   font-weight: 700;
   font-size: 36px;
   line-height: 48px;
-  color: #333333;
+  color: variables.$base-black;
   text-align: center;
 }
 
@@ -36,6 +41,8 @@
   font-size: 14px;
   line-height: 20px;
   text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .swiper-slide__inner {
@@ -48,21 +55,94 @@
 .swiper-slide__old-price {
   font-size: 16px;
   line-height: 32px;
-  color: #7859cf;
+  color: variables.$base-primary;
   margin-right: 6px;
 }
 
 .swiper-slide__actual-price {
-  font-size: 20px;
-  line-height: 32px;
   margin-right: 20px;
-  text-decoration: none;
-  font-weight: 600;
 }
 
 @media (min-width: variables.$tablet-width) {
+
+  .swiper-slide {
+    padding-top: 60px;
+    padding-bottom: 308px;
+    margin-bottom: 188px;
+    box-sizing: border-box;
+  }
+
+  .swiper-slide__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .swiper-slide__badge {
+    order: 0;
+    margin-bottom: 4px;
+  }
   .swiper-slide__title {
     font-size: 56px;
     line-height: 80px;
+    order: 0;
+  }
+
+  .swiper-slide__description {
+    order: 1;
+    font-size: 20px;
+    line-height: 32px;
+    width: 608px;
+    margin-top: 16px;
+  }
+
+  .swiper-slide__inner {
+    order: 2;
+  }
+
+  .swiper-slide__picture {
+    position: absolute;
+    top: 352px;
+    order: 3;
+  }
+}
+
+@media (min-width: variables.$desktop-width) {
+  .swiper-slide {
+    margin: 0;
+    padding: 180px 80px 242px 735px;
+  }
+  .swiper-slide__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .swiper-slide__badge {
+    margin-bottom: 4px;
+  }
+  .swiper-slide__title {
+    font-size: 56px;
+    line-height: 80px;
+
+  }
+
+  .swiper-slide__description {
+    text-align: start;
+    order: 0;
+    font-size: 20px;
+    line-height: 32px;
+    width: 608px;
+    margin-top: 16px;
+  }
+
+  .swiper-slide__inner {
+    order: 0;
+  }
+
+  .swiper-slide__picture {
+    position: absolute;
+    top: 30px;
+    left: 105px;
+    order: 0;
   }
 }

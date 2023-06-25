@@ -1,0 +1,57 @@
+@use "../global/variables.scss";
+
+.product {
+  width: 280px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 20px 20px;
+  background-color: variables.$base-white;
+}
+.product__link {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  &--start {
+    justify-content: flex-start;
+  }
+}
+
+.product__img {
+
+  padding: 0;
+  margin: 0;
+  width: 130px;
+  height: 188px;
+  display: block;
+  align-self: center;
+}
+
+.product__name {
+  padding: 24px 0 4px;
+  text-align: start;
+}
+
+.product__text {
+  padding: 0;
+  margin: 0;
+}
+
+.product__inner {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 16px;
+  align-items: center;
+}
+@media (min-width: variables.$tablet-width) {
+  .product {
+    width: 349px;
+  }
+}
+@media (min-width: variables.$desktop-width) {
+  .product {
+    width: 317px;
+  }
+}

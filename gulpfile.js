@@ -6,7 +6,7 @@ import gulpSass from "gulp-sass";
 import postcss from 'gulp-postcss';
 import postUrl from 'postcss-url';
 import autoprefixer from 'autoprefixer';
-import csso from 'postcss-csso';
+// import csso from 'postcss-csso';
 import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
@@ -42,7 +42,7 @@ export function processStyles () {
     .pipe(postcss([
       postUrl({ assetsPath: '../' }),
       autoprefixer(),
-      csso()
+      // csso()
     ]))
     .pipe(gulp.dest('build/css', { sourcemaps: isDevelopment }))
     .pipe(browser.stream());

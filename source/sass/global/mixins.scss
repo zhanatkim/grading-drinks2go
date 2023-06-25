@@ -1,0 +1,59 @@
+@use "../global/variables.scss";
+
+@mixin button-hover-down {
+
+  &:hover,
+  &:focus {
+    background-color: variables.$primary-lighter;
+  }
+
+  &:active {
+    background-color: variables.$primary-darker;
+  }
+
+  &:disabled {
+    background-color: variables.$base-gray;
+  }
+}
+
+@mixin light-button-hover-down {
+
+  &:hover,
+  &:focus {
+    background-color: variables.$primary-lighter;
+    color: variables.$base-white;
+  }
+
+  &:active {
+    background-color: variables.$primary-darker;
+  }
+
+  &:disabled {
+    background-color: variables.$base-gray;
+    color: variables.$base-white;
+    background-color: variables.$light-gray;
+  }
+}
+
+@mixin footer-link-hover-down {
+  &:hover,
+  &:focus {
+    color: variables.$base-primary;
+  }
+
+  &:active {
+    color: variables.$primary-darker;
+  }
+}
+
+@mixin header-link-hover-down {
+
+  &:hover,
+  &:focus {
+    color: variables.$base-primary;
+  }
+
+  &:active {
+    background-color: variables.$base-secondary;
+  }
+}

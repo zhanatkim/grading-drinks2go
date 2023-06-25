@@ -1,13 +1,21 @@
 @use "../global/variables.scss";
+@use "../global/mixins.scss";
+
 
 .header-user {
   display: flex;
 }
 
 .header-user__link {
+  @include mixins.header-link-hover-down;
   padding: 22px;
   box-sizing: border-box;
+  gap: 8px;
   align-self: center;
+  display: flex;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
 }
 
 .header-user__text {
@@ -15,6 +23,10 @@
 }
 
 @media (min-width: variables.$desktop-width) {
+  .header-user {
+    gap: 20px;
+  }
+
   .header-user__text {
     display: block;
   }
