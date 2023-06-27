@@ -1,7 +1,6 @@
 @use "../global/variables.scss";
 @use "../global/mixins.scss";
 
-
 .pagination {
   padding-top: 40px;
   width: 100%;
@@ -69,8 +68,6 @@
     }
   }
 
-
-
   .pagination__button svg {
     display: none;
   }
@@ -78,5 +75,10 @@
   .pagination__span {
     display: inline;
   }
+}
 
+@media (min-width: variables.$desktop-width) {
+  .pagination {
+    padding-top: 60px;
+  }
 }

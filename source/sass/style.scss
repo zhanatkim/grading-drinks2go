@@ -3,10 +3,10 @@
 @import "global/global";
 @import "global/fonts";
 @import "global/visually-hidden";
-@import "global/vendor";
 @import "global/mixins";
 
 /* BLOCKS */
+@import "blocks/page";
 @import "blocks/header";
 @import "blocks/header-user";
 @import "blocks/main-nav";
@@ -17,8 +17,6 @@
 @import "blocks/title";
 @import "blocks/subtitle";
 @import "blocks/price";
-@import "blocks/main-container";
-@import "blocks/promo";
 @import "blocks/badge";
 @import "blocks/button";
 @import "blocks/features";

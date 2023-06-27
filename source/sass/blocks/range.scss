@@ -1,4 +1,5 @@
 @use "../global/variables.scss";
+@use "../global/mixins.scss";
 
 .range {
   padding-top: 20px;
@@ -32,7 +33,7 @@
   z-index: 1;
 
   &--min {
-    left: -12px;
+    left: -10px;
   }
 
   &--max {
@@ -67,24 +68,47 @@
 }
 
 .range__input {
+  @include mixins.input-hover-down;
   width: 118px;
   box-sizing: border-box;
   border: 2px solid $primary-lighter;
   border-radius: 4px;
-  padding: 8px 10px;
-
-  &:hover,
-  &:focus {
-    outline-color: $primary-darker;
-  }
-
-  &:disabled {
-    border-color: $light-gray;
-  }
+  padding: 6px 10px;
+  text-align: center;
+  font-size: 16px;
+  font-family: Montserrat;
+  font-weight: 500;
+  line-height: 24px;
 }
 
 .range__span {
   width: 8px;
   height: 2px;
   background-color: $base-gray;
+}
+
+@media (min-width: variables.$tablet-width) {
+  .range__toggle--max {
+    right: 0;
+  }
+
+  .range__inner {
+    padding-top: 20px;
+  }
+  .range__input {
+    width: 88px;
+  }
+}
+
+@media (min-width: variables.$desktop-width) {
+  .range__toggle--max {
+    right: -14px;
+  }
+
+  .range__inner {
+    padding-top: 22px;
+  }
+  .range__input {
+    width: 134px;
+  }
 }

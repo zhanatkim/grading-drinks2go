@@ -2,7 +2,6 @@
 
 .swiper-slide {
   padding: 0;
-  padding-bottom: 60px;
 
   &--1 {
     background-color: variables.$flat-white;
@@ -19,6 +18,7 @@
 }
 
 .swiper-slide__wrapper {
+  padding: 20px 20px 60px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -27,12 +27,18 @@
 
 }
 
+.swiper-slide__badge {
+  padding-top: 6px;
+  padding-bottom: 4px;
+}
+
 .swiper-slide__title {
   margin: 0;
   padding: 0;
   font-weight: 700;
   font-size: 36px;
   line-height: 48px;
+  letter-spacing: 0.72px;
   color: variables.$base-black;
   text-align: center;
 }
@@ -73,17 +79,20 @@
   }
 
   .swiper-slide__wrapper {
+    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
   .swiper-slide__badge {
     order: 0;
-    margin-bottom: 4px;
+    padding-top: 0;
+
   }
   .swiper-slide__title {
     font-size: 56px;
     line-height: 80px;
+    letter-spacing: 1.12px;
     order: 0;
   }
 
@@ -133,6 +142,7 @@
     line-height: 32px;
     width: 608px;
     margin-top: 16px;
+    margin-bottom: 40px;
   }
 
   .swiper-slide__inner {

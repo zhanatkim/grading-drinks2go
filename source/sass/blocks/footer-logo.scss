@@ -7,11 +7,12 @@
 @media (min-width: variables.$desktop-width) {
   .footer-logo {
     display: grid;
-    gap: 10px;
-
+    gap: 5px;
   }
 
   .footer-logo__text {
-    display: inline;
+    margin: 0;
+    padding: 0;
+    display: flex;
   }
 }

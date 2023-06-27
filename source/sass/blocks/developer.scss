@@ -1,15 +1,13 @@
 @use "../global/mixins.scss";
 @use "../global/variables.scss";
 
-.developer {
-
-}
-
 .developer__link {
   @include mixins.footer-link-hover-down;
-  color: $base-gray;
+  color: variables.$base-gray;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 4px;
+  font-size: 12px;
+  line-height: 16px;
 }

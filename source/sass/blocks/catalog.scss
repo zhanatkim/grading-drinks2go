@@ -3,11 +3,15 @@
 .catalog {
   width: 100%;
   background-color: variables.$lightest-grey;
-  padding: 50px 20px 44px;
-  box-sizing: border-box;
+  padding-top: 50px;
+  padding-bottom: 44px;
 }
 
 .catalog__wrapper {
+  width: variables.$mobile-width;
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-right: 20px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -25,13 +29,27 @@
 
 @media (min-width: variables.$tablet-width) {
   .catalog {
-    padding: 80px 20px 90px;
+    padding-top: 80px;
+    padding-bottom: 90px;
+  }
+
+  .catalog__wrapper {
+    width: variables.$tablet-width;
+  }
+
+  .catalog__title {
+    padding-bottom: 20px;
+  }
+
+  .catalog__sorting {
+    padding: 44px 0 30px;
   }
 }
 
 @media (min-width: variables.$desktop-width) {
   .catalog {
-    padding: 100px 40px 120px;
+    padding-top: 100px;
+    padding-bottom: 120px;
   }
 
   .catalog__title {
@@ -39,7 +57,19 @@
   }
 
   .catalog__wrapper {
-    padding-left: 348px;
+    width: variables.$desktop-width;
+    padding-right: 40px;
+    padding-left: 388px;
     position: relative;
+  }
+
+  .catalog__form {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+  }
+
+  .catalog__sorting {
+    padding-top: 40px;
   }
 }

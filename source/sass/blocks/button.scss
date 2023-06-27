@@ -1,15 +1,14 @@
 @use "../global/variables.scss";
 @use "../global/mixins.scss";
 
-
 .button {
   @include mixins.button-hover-down;
 
   border: none;
-  background-color: $base-primary;
+  background-color: variables.$base-primary;
   padding: 8px 20px;
   border-radius: 4px;
-  color: $base-white;
+  color: variables.$base-white;
   font-size: 16px;
   line-height: 24px;
   font-family: "Montserrat", "Arial", sans-serif;
@@ -20,12 +19,14 @@
     background-image: url("../../img/button-cart.svg");
     background-position: left 20px top 10px;
     background-repeat: no-repeat;
+    font-size: 14px;
+    line-height: 20px;
   }
 
 
   &--light {
     @include mixins.light-button-hover-down;
-    background-color: $base-white;
-    color: $base-primary;
+    background-color: variables.$base-white;
+    color: variables.$base-primary;
   }
 }

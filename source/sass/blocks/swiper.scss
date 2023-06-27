@@ -41,6 +41,15 @@
     gap: 8px;
     justify-content: center;
   }
+
+  .swiper-horizontal>.swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 50px;
+    top: var(--swiper-pagination-top,auto);
+    left: 8px;
+    width: 100%;
+  }
+
   .swiper-pagination-bullet {
     width: 62px;
     height: 4px;
@@ -53,5 +62,3 @@
     background-color: $base-primary;
   }
 }
-
-

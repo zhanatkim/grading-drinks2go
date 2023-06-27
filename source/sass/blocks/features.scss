@@ -1,7 +1,9 @@
 @use "../global/variables.scss";
 
 .features {
-  padding: 50px 20px 60px;
+  padding-top: 50px;
+  padding-bottom: 60px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,17 +15,28 @@
 }
 
 .features__wrapper {
+  padding-left: 20px;
+  padding-right: 20px;
+  width: variables.$mobile-width;
   margin: 0 auto;
+  box-sizing: border-box;
 }
+
 .features__list {
   display: grid;
   gap: 32px;
 }
 
 @media (min-width: variables.$tablet-width) {
-
   .features {
-    padding: 60px 30px 100px;
+    padding-top: 61px;
+    padding-bottom: 100px;
+  }
+
+  .features__wrapper {
+    padding-left: 30px;
+    padding-right: 30px;
+    width: variables.$tablet-width;
   }
 
   .features__title {
@@ -38,9 +51,15 @@
 }
 
 @media (min-width: variables.$desktop-width) {
-
   .features {
-    padding: 100px 40px 120px;
+    padding-top: 100px;
+    padding-bottom: 120px;
+  }
+
+  .features__wrapper {
+    padding-left: 40px;
+    padding-right: 40px;
+    width: variables.$desktop-width;
   }
 
   .features__title {
